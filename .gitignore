@@ -1,0 +1,27 @@
+# ─── BACKEND (Django) ─────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# Environnement virtuel
+env/
+
+
+# ─── FRONTEND (React) ─────────────────────────────────
+node_modules/
+dist/
+build/
+.env
+.env.local
+.env.production
+
+# ─── ÉDITEURS ─────────────────────────────────────────
+.vscode/
+.idea/
+*.DS_Store

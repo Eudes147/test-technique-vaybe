@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Jean Dupont",
+        "email": "jeandupont@example.com",
+        "role": "developer",
+        "points": 2
+    },
+    {
+        "id": 2,
+        "name": "Marie Curie",
+        "email": "marie.curie@example.com",
+        "role": "designer",
+        "points": 3
+    },
+    {
+        "id": 3,
+        "name": "Albert Einstein",
+        "email": "alberteinstein@example.com",
+        "role": "designer",
+        "points": 1
+    }
+]

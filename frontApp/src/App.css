@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+@plugin "daisyui";
+@theme{
+    --color-cobalt-blue-50: #e6f1ff;
+    --color-cobalt-blue-100: #cce2ff;
+    --color-cobalt-blue-200: #9ac5fe;
+    --color-cobalt-blue-300: #67a8fe;
+    --color-cobalt-blue-400: #348cfe;
+    --color-cobalt-blue-500: #016ffe;
+    --color-cobalt-blue-600: #0159cb;
+    --color-cobalt-blue-700: #014298;
+    --color-cobalt-blue-800: #012c65;
+    --color-cobalt-blue-900: #001633;
+    --color-cobalt-blue-950: #000f24;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+.active {
+    color: var(--color-cobalt-blue-700);
+    &:hover {
+        color: var(--color-cobalt-blue-600);
+    }
+    font-weight: 500;
+}
