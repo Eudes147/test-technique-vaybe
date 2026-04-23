@@ -28,7 +28,7 @@ function CandidaturesPage() {
             <header className="flex flex-wrap sm: justify-center items-center justify-between px-10 py-5 mt-10">
                 <h1 className="text-3xl text-center sm:text-md font-bold text-left">Bonjour Monsieur/Madame</h1>
 
-                <div className="flex gap-4 justify-center items-center">
+                <div className="flex gap-4 justify-between md:justify-center items-center">
                     
                     <button
                         onClick={() => { adminLogout(); navigate('/admin') }}
