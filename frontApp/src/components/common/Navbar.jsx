@@ -27,7 +27,7 @@ function Navbar({actualPage}) {
                 </ul>
             </div>
             <div className="navbar-end">
-                <a className="btn bg-cobalt-blue-700 hover:bg-cobalt-blue-600 text-white"><Phone/><span className="hidden md:inline">Contactez-nous</span></a>
+                <a href='https://www.vaybe.tech' target="_blank" className="btn bg-cobalt-blue-700 hover:bg-cobalt-blue-600 text-white"><Phone/><span className="hidden md:inline">Contactez-nous</span></a>
             </div>
         </div>
     );
