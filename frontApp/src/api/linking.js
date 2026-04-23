@@ -1,5 +1,6 @@
 import axios from 'axios'
 
+
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL || "http://localhost:8000/api"
   })
@@ -10,6 +11,8 @@ const getAuthHeader = () => ({
 })
 
 export const adminLogin = async (username, password) => {
+  console.log('API URL:', api.defaults.baseURL);
+
   const { data } = await api.post('/admin/login/', { username, password })
   return data
 }
