@@ -28,7 +28,7 @@ function CandidaturesPage() {
             <header className="flex flex-wrap sm: justify-center items-center justify-between px-10 py-5 mt-10">
                 <h1 className="text-3xl text-center sm:text-md font-bold text-left">Bonjour Monsieur/Madame</h1>
 
-                <div className="flex gap-4 items-center">
+                <div className="flex gap-4 justify-center items-center">
                     
                     <button
                         onClick={() => { adminLogout(); navigate('/admin') }}
@@ -45,7 +45,7 @@ function CandidaturesPage() {
             ) : (
                 <table className="sm:text-sm table-auto w-full text-center border-collapse border border-gray-300">
                     <thead>
-                        <tr className="py-4 bg-gray-200">
+                        <tr className="py-4 bg-cobalt-blue-300">
                             <th className="py-4 border border-gray-200">N°</th>
                             <th className="py-4 border border-gray-200">Nom & Prénoms</th>
                             <th className="py-4 border border-gray-200">Email</th>
