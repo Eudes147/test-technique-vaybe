@@ -9,6 +9,7 @@ function CandidaturesPage() {
     const [candidatures, setCandidatures] = useState([])
     const [loading, setLoading] = useState(true)
     const navigate = useNavigate()
+    const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000/api"
 
     useEffect(() => {
         if (!isAuthenticated()) {
@@ -71,7 +72,7 @@ function CandidaturesPage() {
                                     <td className="py-4 border border-gray-200">{candidat.email}</td>
                                     <td className="py-4 border border-gray-200">{candidat.role.toUpperCase()}</td>
                                     <td className="py-4 border border-gray-200">{candidat.score}</td>
-                                    <td className="py-4 border border-gray-200">{candidat.cv && (<a href={candidat.cv} target="_blank" className="btn btn-sm">Voir CV</a>)}</td>
+                                    <td className="py-4 border border-gray-200">{candidat.cv && (<a href={`${BASE_URL.replace('/api', '')}${candidat.cv}`} target="_blank" className="btn btn-sm">Voir CV</a>)}</td>
                                     
                                 </tr>
                             ))
