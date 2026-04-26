@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 
+import Reveal from "../components/common/Reveal"
 import { LogOut } from "lucide-react";
 import { useNavigate } from "react-router-dom"
 import { getApplications, adminLogout, isAuthenticated } from "../api/linking"
@@ -25,25 +26,26 @@ function CandidaturesPage() {
         <div className="max-h-screen overflow-y-auto [scrollbar-gutter:stable]">
             
         
-            <header className="flex flex-wrap justify-between sm:justify-center items-center justify-between px-10 py-5 mt-10">
-                <h1 className="text-3xl text-center md:text-md font-bold text-left">Bonjour Monsieur/Madame</h1>
-
-                <div className="flex gap-4 justify-between md:justify-center items-center">
-                    
+            <header className="flex flex-wrap justify-center md:justify-between items-center px-10 py-5 mt-10">
+                <Reveal delay={0.5}>
+                    <h1 className="text-3xl text-center md:text-left font-bold">Bonjour Monsieur/Madame</h1>
+                </Reveal>
+                <Reveal delay={0/5} className="flex gap-4 items-center">
                     <button
                         onClick={() => { adminLogout(); navigate('/admin') }}
                         className="btn btn-error text-white"
                     >
-                        <LogOut/>
+                        <LogOut />
                         Déconnexion
                     </button>
-                </div>
+                </Reveal>
             </header>
 
             {loading ? (
                 <p className="text-center mt-20">Chargement...</p>
             ) : (
-                <table className="sm:text-sm table-auto w-full text-center border-collapse border border-gray-300">
+                <Reveal delay={0.75}>
+                    <table className="sm:text-sm table-auto w-full text-center border-collapse border border-gray-300">
                     <thead>
                         <tr className="py-4 bg-cobalt-blue-300">
                             <th className="py-4 border border-gray-200">N°</th>
@@ -51,6 +53,7 @@ function CandidaturesPage() {
                             <th className="py-4 border border-gray-200">Email</th>
                             <th className="py-4 border border-gray-200">Rôle</th>
                             <th className="py-4 border border-gray-200">Score</th>
+                            <th className="py-4 border border-gray-200">CV</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -68,13 +71,16 @@ function CandidaturesPage() {
                                     <td className="py-4 border border-gray-200">{candidat.email}</td>
                                     <td className="py-4 border border-gray-200">{candidat.role.toUpperCase()}</td>
                                     <td className="py-4 border border-gray-200">{candidat.score}</td>
+                                    <td className="py-4 border border-gray-200">{candidat.cv && (<a href={candidat.cv} target="_blank" className="btn btn-sm">Voir CV</a>)}</td>
+                                    
                                 </tr>
                             ))
                         )}
                     </tbody>
                 </table>
+                </Reveal>
             )}
-        </div>
+        </div>                                                                                                        
     )
 }
 

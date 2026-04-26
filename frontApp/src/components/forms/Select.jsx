@@ -1,6 +1,8 @@
+import Reveal from "../common/Reveal"
+
 function Select({ label, options }) {
     return (
-        <div className="form-control w-full max-w-xs">
+        <Reveal delay={0.5} className="form-control w-full max-w-xs">
             <label className="label">
                 <span className="label-text">{label}</span><span className="color-red-500">*</span>
             </label>
@@ -11,7 +13,7 @@ function Select({ label, options }) {
                     ))
                 }
             </select>
-        </div>
+        </Reveal>
     );
 }
 

@@ -1,5 +1,7 @@
 import {House,Send,UserStar,IdCardLanyard,Phone} from 'lucide-react'
 
+import Reveal from "../common/Reveal"
+
 
 import logoVaybe from "../../assets/logoVaybe.png"
 
@@ -18,17 +20,23 @@ function Navbar({actualPage}) {
                     <li><a href="/submit" className={`${actualPage == "employeePage" ? "active" : ""}`}><Send/> Postuler</a></li>
                 </ul>
                 </div>
-                <a className=""><img src={logoVaybe} className="w-32 h-16" alt="" /></a>
+                <Reveal delay={0.4}>
+                    <a className=""><img src={logoVaybe} className="w-32 h-16" alt="" /></a>
+                </Reveal>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                <li><a href="/" className={`grid items-center ${actualPage == "homePage" ? "active" : ""}`}><House/>Home</a></li>
-                <li><a href="/submit" className={`${actualPage == "employeePage" ? "active" : ""}`}><Send/> Postuler</a></li>
+                    <Reveal delay={0.45}>
+                        <li><a href="/" className={`grid items-center ${actualPage == "homePage" ? "active" : ""}`}><House/>Home</a></li>
+                    </Reveal>
+                    <Reveal delay={0.85}>
+                        <li><a href="/submit" className={`${actualPage == "employeePage" ? "active" : ""}`}><Send/> Postuler</a></li>
+                    </Reveal>
                 </ul>
             </div>
-            <div className="navbar-end">
+            <Reveal delay={0.75} className="navbar-end">
                 <a href='https://www.vaybe.tech' target="_blank" className="btn bg-cobalt-blue-700 hover:bg-cobalt-blue-600 text-white"><Phone/><span className="hidden md:inline">Contactez-nous</span></a>
-            </div>
+            </Reveal>
         </div>
     );
 }
